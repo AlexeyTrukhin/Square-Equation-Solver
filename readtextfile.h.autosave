@@ -1,0 +1,15 @@
+#ifndef READTEXTFILE_H
+#define READTEXTFILE_H
+
+QString getFileText(){
+
+    QFile file("C:/data.txt");
+
+    if(!file.open(QIODevice::ReadOnly)){
+        return "ERROR";
+    }
+
+    return QString(file.readAll());
+    }
+
+#endif // READTEXTFILE_H
